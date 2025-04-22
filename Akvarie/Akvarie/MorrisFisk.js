@@ -19,7 +19,7 @@ class Bass{
                 this.#pos.x-this.#sizeX, this.#pos.y+this.#sizeY/4);
         ellipse(this.#pos.x,this.#pos.y,this.#sizeX,this.#sizeY)
         fill("grey")
-        rect(this.#pos.x-this.#sizeX/12, this.#pos.y-this.#sizeY/2,this.#sizeX/12, this.#sizeY)
+        rect(this.#pos.x-this.#sizeX/12, this.#pos.y-this.#sizeY/4,this.#sizeX/12, this.#sizeY)
         line(this.#pos.x,this.#pos.y,this.#pos.x+this.#sizeX/4,this.#pos.y)
         circle(this.#pos.x+this.#sizeX/6,this.#pos.y-this.#sizeY/6,5)
     }
