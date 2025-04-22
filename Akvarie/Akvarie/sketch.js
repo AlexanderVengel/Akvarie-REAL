@@ -1,6 +1,6 @@
-let  posVec, velVec, nemo, haj, sharkposvec
+let  posVec, velVec, nemo, haj, sharkposvec, Akvarium
 function preload(){
-    Akvarium = loadImage('/Assets/Aquarium.png')
+    Akvarium = loadImage('/Akvarie/Assets/Aquarium.png')
 }
 
 
