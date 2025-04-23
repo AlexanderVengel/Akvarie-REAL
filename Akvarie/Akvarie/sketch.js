@@ -1,4 +1,4 @@
-let  posVec, velVec, nemo, haj, sharkposvec, Akvarium
+let  posVec, velVec, nemo, haj, sharkposvec, Akvarium, bassposVec, bassvelVec
 function preload(){
     Akvarium = loadImage('/Akvarie/Assets/Aquarium.png')
 }
@@ -14,11 +14,12 @@ function setup()
     sharkposvec = new Vector(2,1)
     sharkvelvec = new Vector(3,4)
     dariusvelvec= new Vector(1,2)
+    bassposvec = new Vector(1,4)
     bassvelvec = new Vector(3,2)
     nemo = new Klovnefisk(posVec,velVec)
     haj = new Shark(sharkposvec,sharkvelvec)
     darius = new Klovnefisk(posVec,dariusvelvec)
-    bass = new bass (posVec,bassvelVec)
+    bass = new Bass (bassposVec,bassvelVec)
 }
 
 function draw()
