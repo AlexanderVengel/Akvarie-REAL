@@ -14,9 +14,11 @@ function setup()
     sharkposvec = new Vector(2,1)
     sharkvelvec = new Vector(3,4)
     dariusvelvec= new Vector(1,2)
+    bassvelvec = new Vector(3,2)
     nemo = new Klovnefisk(posVec,velVec)
     haj = new Shark(sharkposvec,sharkvelvec)
     darius = new Klovnefisk(posVec,dariusvelvec)
+    bass = new bass (posVec,bassvelVec)
 }
 
 function draw()
@@ -28,5 +30,7 @@ function draw()
     haj.update()
     darius.show("red")
     darius.update()
+    bass.show("grey")
+    bass.update()
 }
 //test fn igen igen igen pls virk
