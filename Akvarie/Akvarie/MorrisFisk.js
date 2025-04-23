@@ -12,7 +12,7 @@ class Bass{
         this.boundaryCheck()
     }
 
-    show(col){
+    show(col="grey"){
         fill(col)
         triangle(this.#pos.x, this.#pos.y, 
                 this.#pos.x-this.#sizeX, this.#pos.y-this.#sizeY/2, 

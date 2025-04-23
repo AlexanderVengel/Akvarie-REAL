@@ -1,15 +1,17 @@
-class fisk{
-    constructer(pos, vel, sizeX, sizeY){
+class fisk {
+    constructor(pos, vel, sizeX, sizeY) {
         this.pos = pos;
         this.vel = vel;
         this.sizeX = sizeX;
         this.sizeY = sizeY;
     }
-    update(){
-        this.pos=this.pos.add(this.vel)
-        this.boundaryCheck()
+
+    update() {
+        this.pos = this.pos.add(this.vel);
+        this.boundaryCheck();
     }
-    boundaryCheck(){
+
+    boundaryCheck() {
         if ((this.pos.x > width) || (this.pos.x < 0)) {
             this.vel.x = this.vel.x * -1;
         }
