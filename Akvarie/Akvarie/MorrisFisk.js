@@ -3,7 +3,7 @@ class Bass{
     constructor(pos,vel){
         this.#pos = pos;
         this.#vel = vel;
-        this.#sizeX = 60;
+        this.#sizeX = 40;
         this.#sizeY = 30;
     }
 
@@ -15,13 +15,13 @@ class Bass{
     show(col){
         fill(col)
         triangle(this.#pos.x, this.#pos.y, 
-                this.#pos.x-this.#sizeX, this.#pos.y-this.#sizeY/4, 
-                this.#pos.x-this.#sizeX, this.#pos.y+this.#sizeY/4);
+                this.#pos.x-this.#sizeX, this.#pos.y-this.#sizeY/2, 
+                this.#pos.x-this.#sizeX, this.#pos.y+this.#sizeY/2);
         ellipse(this.#pos.x,this.#pos.y,this.#sizeX,this.#sizeY)
         fill("grey")
-        rect(this.#pos.x-this.#sizeX/12, this.#pos.y-this.#sizeY/4,this.#sizeX/12, this.#sizeY)
-        line(this.#pos.x,this.#pos.y,this.#pos.x+this.#sizeX/4,this.#pos.y)
-        circle(this.#pos.x+this.#sizeX/6,this.#pos.y-this.#sizeY/6,5)
+        rect(this.#pos.x-this.#sizeX/8, this.#pos.y-this.#sizeY/2,this.#sizeX/8, this.#sizeY)
+        line(this.#pos.x,this.#pos.y,this.#pos.x+this.#sizeX/2,this.#pos.y)
+        circle(this.#pos.x+this.#sizeX/4,this.#pos.y-this.#sizeY/4,3)
     }
 
     boundaryCheck(){
