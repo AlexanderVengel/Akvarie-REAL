@@ -3,7 +3,7 @@ class Bass{
     constructor(pos,vel){
         this.#pos = pos;
         this.#vel = vel;
-        this.#sizeX = 40;
+        this.#sizeX = 60;
         this.#sizeY = 30;
     }
 
