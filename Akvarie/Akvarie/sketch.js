@@ -19,16 +19,16 @@ function setup()
     nemo = new Klovnefisk(posVec,velVec)
     haj = new Shark(sharkposvec,sharkvelvec)
     darius = new Klovnefisk(posVec,dariusvelvec)
-    bass = new Bass (bassposVec,bassvelVec)
+    bass = new Bass (bassposvec,bassvelvec)
 }
 
 function draw()
 {
     image(Akvarium,0,0,1520,770)
-    nemo.show("red")
+    nemo.show()
     nemo.update()
     haj.show("Darkblue")
     haj.update()
-    bass.show("grey")
+    bass.show()
     bass.update()
 }
