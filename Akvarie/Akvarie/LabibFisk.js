@@ -1,12 +1,4 @@
-function setup(){
-
-    
-}
-
-
-function draw(){
-
-    class sild{
+    class Sild{
         #pos; #vel; #sizeX; #sizeY
         constructor(pos,vel){
             this.#pos = pos;
@@ -20,8 +12,7 @@ function draw(){
             this.boundaryCheck()
         }
      
-        show(col){
-            col = "yellow"
+        show(col="yellow"){
             fill(col)
             triangle(this.#pos.x, this.#pos.y,
                     this.#pos.x-this.#sizeX+10, this.#pos.y-this.#sizeY/2,
@@ -44,6 +35,3 @@ function draw(){
         }
     }
      
-
-
-}
