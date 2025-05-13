@@ -12,7 +12,7 @@ class Shark{
         this.boundaryCheck()
     }
 
-    show(col){
+    show(col="darkblue"){
         fill(col)
         triangle(this.#pos.x, this.#pos.y, 
                 this.#pos.x-this.#sizeX+20, this.#pos.y-this.#sizeY/2, 

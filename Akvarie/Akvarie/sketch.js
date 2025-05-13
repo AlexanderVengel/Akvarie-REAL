@@ -3,37 +3,38 @@ function preload(){
     Akvarium = loadImage('/Akvarie/Assets/Aquarium.png')
 }
 
-
+let fishes = [];
 function setup() 
 {
 	createCanvas(1520, 770);
     imageMode(CORNERS)
-    
-    posVec = new Vector(4,1)
-    velVec = new Vector(2,2.5)
-    sharkposvec = new Vector(2,1)
-    sharkvelvec = new Vector(3,4)
-    dariusvelvec= new Vector(1,2)
-    bassposvec = new Vector(1,4)
-    bassvelvec = new Vector(3,2)
-    sildposvec = new Vector(2,3)
-    sildvelvec = new Vector (2,3)
-    nemo = new Klovnefisk(posVec,velVec)
-    haj = new Shark(sharkposvec,sharkvelvec)
-    darius = new Klovnefisk(posVec,dariusvelvec)
-    bass = new Bass (bassposvec,bassvelvec)
-    sild = new Sild (sildposvec, sildvelvec)
-}
+   
 
-function draw()
-{
-    image(Akvarium,0,0,1520,770)
-    nemo.show()
-    nemo.update()
-    haj.show("Darkblue")
-    haj.update()
-    bass.show()
-    bass.update()
-    sild.show()
-    sild.update()
-}
+    
+        let antalFisk = 15; 
+    
+    for (let i = 0; i < antalFisk; i++) {
+        let pos = new Vector(random(width), random(height));
+        let vel = new Vector(random(-2, 2), random(-2, 2));
+        let nyFisk;
+    
+        let type = int(random(4));
+        if (type === 0) nyFisk = new Klovnefisk(pos, vel);
+        else if (type === 1) nyFisk = new Shark(pos, vel);
+        else if (type === 2) nyFisk = new Bass(pos, vel);
+        else nyFisk = new Sild(pos, vel);
+    
+        fishes.push(nyFisk);
+    }
+    
+    }
+    
+    
+
+    function draw() {
+        image(Akvarium, 0, 0, 1520, 770);
+        for (let fish of fishes) {
+            fish.update();
+            fish.show();}
+        
+        }
